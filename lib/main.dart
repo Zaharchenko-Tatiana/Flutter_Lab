@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'Person.dart';
 import 'Colors.dart';
 
 void main() {
@@ -11,50 +11,37 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
-        appBar: AppBar(),
-        body:
-     Column(
-    children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-
-          Container(padding: const EdgeInsets.symmetric(horizontal: 14.0),
-            child: const Icon(Icons.clear, color: Colors_add.ConstantColor, size: 24),
-          ),
-
-          Container(padding: const EdgeInsets.symmetric(horizontal: 14.0),
-            child: const Icon(Icons.exit_to_app, color: Colors_add.ConstantColor, size: 24),
-          ),
-        ],
-      ),
-
-      Container(
-        width: 110,
-        height: 110,
-        decoration: ShapeDecoration(
-          image: const DecorationImage(
-            image: AssetImage('res/Photo.jpg'),
-            fit: BoxFit.fill,
-          ),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(38),
-          ),
+        appBar: AppBar(
+           /* mainAxisAlignment: MainAxisAlignment.spaceBetween,*/
+            actions: <Widget>[
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 14.0),
         ),
-      ),
+              IconButton(
+                icon: const Icon(Icons.clear, color: Colors_add.ConstantColor, size: 24),
+               onPressed: () {  },
+              ),
 
-          Container(padding: const EdgeInsets.symmetric(vertical: 36.0),
-            child:
-            const Text('Екатерина',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 24,
-                fontFamily: 'SF Pro Display',
-                fontWeight: FontWeight.w700,
-                height: 0.06,
-              ),),),
+              const Spacer(),
+
+              IconButton(
+                  icon: const Icon(Icons.exit_to_app, size: 24),
+                  onPressed: () {
+                  },
+                  color: Colors_add.ConstantColor
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 14.0),
+              ),
+            ],
+          ),
+
+        body: Column(
+          children: [
+            person(),
+
 
       const SizedBox(height: 14),
 
