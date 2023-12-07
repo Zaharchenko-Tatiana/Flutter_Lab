@@ -4,6 +4,7 @@ import 'package:flutter_app/subscriptions.dart';
 import 'package:flutter_app/tabs.dart';
 import 'package:flutter_app/tariffLimits_button.dart';
 import 'Interests.dart';
+import 'InterestsButton.dart';
 import 'Person.dart';
 import 'Colors.dart';
 import 'Tariffs_limits.dart';
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
                 tariffLimits(),
                 tarLimBut(),
                 interests(),
+                interestsBut(),
                 footer(),
               ],
             ),
