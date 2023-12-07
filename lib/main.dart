@@ -2,8 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/sub_scroll.dart';
 import 'package:flutter_app/subscriptions.dart';
 import 'package:flutter_app/tabs.dart';
+import 'package:flutter_app/tariffLimits_button.dart';
+import 'Interests.dart';
 import 'Person.dart';
 import 'Colors.dart';
+import 'Tariffs_limits.dart';
+import 'footer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,9 +50,14 @@ class MyApp extends StatelessWidget {
                 tabs(),
                 subscriptions(),
                 subScroll(),
+                tariffLimits(),
+                tarLimBut(),
+                interests(),
+                footer(),
               ],
             ),
           ),
-        ));
+        )
+    );
   }
 }

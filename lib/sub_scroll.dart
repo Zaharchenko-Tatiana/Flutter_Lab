@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'Colors.dart';
@@ -10,7 +9,7 @@ Widget subScroll() {
         color: Colors_add.Fon_befor_tabs,
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.all(14.0),
+          padding: const EdgeInsets.all(16.0),
           child: Row(
             children: [
               Container(

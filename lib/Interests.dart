@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'Colors.dart';
 
-Widget subscriptions() {
+Widget interests() {
   return Column(
     children: [
       Container(
         color: Colors_add.Fon_befor_tabs,
-        height: 106,
+        height: 96,
         width: double.maxFinite,
         child: const Column(
           children: [
-            SizedBox(height: 40),
+            SizedBox(height: 30),
             SizedBox(
               width: 370,
               child: Text(
-                'У вас подключено',
+                'Интересы',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
@@ -30,7 +30,7 @@ Widget subscriptions() {
             SizedBox(
               width: 370,
               child: Text(
-                'Подписки, автоплатежи и сервисы на которые',
+                'Мы подбираем истории и предложения по темам,',
                 style: TextStyle(
                   color: Colors_add.Text_unpressed,
                   fontSize: 14,
@@ -45,7 +45,7 @@ Widget subscriptions() {
             SizedBox(
               width: 370,
               child: Text(
-                'вы подписались',
+                'которые вам нравятся',
                 style: TextStyle(
                   color: Colors_add.Text_unpressed,
                   fontSize: 14,
