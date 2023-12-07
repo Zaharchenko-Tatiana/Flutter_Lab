@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/subscriptions.dart';
+import 'package:flutter_app/tabs.dart';
 import 'Person.dart';
 import 'Colors.dart';
 
@@ -14,7 +16,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: Scaffold(
         appBar: AppBar(
-           /* mainAxisAlignment: MainAxisAlignment.spaceBetween,*/
             actions: <Widget>[
               Container(
                 margin: const EdgeInsets.symmetric(horizontal: 14.0),
@@ -41,64 +42,9 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             person(),
-
-
-      const SizedBox(height: 14),
-
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Container(
-            width: 190,
-            height: 56,
-            child:
-                const Center(
-            child: Text(
-              'Профиль',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 16,
-                fontFamily: 'SF Pro Text',
-                fontWeight: FontWeight.w500,
-                height: 0.08,
-                letterSpacing: -0.40,
-              ),
-            ),
-                ),
-          ),
-
-          Container(
-            width: 190,
-            height: 56,
-            child:
-            const Center(
-              child: Text(
-              'Настройки',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors_add.Text_unpressed,
-                fontSize: 16,
-                fontFamily: 'SF Pro Text',
-                fontWeight: FontWeight.w500,
-                height: 0.08,
-                letterSpacing: -0.40,
-              ),
-            ),
-          ),),
-          ],
-
-      ),
-
-          Row(
-            children: [
-              Container(
-                width: 190,
-                child: const Image(image: AssetImage('res/vector.jpg'),),
-              ),
-      ],
-          ),
-
+            const SizedBox(height: 14),
+            tabs(),
+            subscriptions(),
 
     ],
     ),
